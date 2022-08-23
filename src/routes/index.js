@@ -1,10 +1,13 @@
 const newsRouter = require('./news');
 const adminRouter = require('./admin');
+const courseRouter = require('./course')
 
 function route(app){
 
 
     app.use('/news',newsRouter);
+
+    app.use('/course',courseRouter);
 
     app.use('/admin', adminRouter);
 
