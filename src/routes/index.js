@@ -13,11 +13,12 @@ function route(app){
 
     app.get('/', (req, res) => {
 
-        res.render('home')
+        // res.render('home')
+        res.render('home', {layout: false});
       })
       
     app.post('/', (req, res) => {
-    
+  
     console.log(req.body.input)
     res.send('')
     

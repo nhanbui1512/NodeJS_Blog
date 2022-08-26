@@ -9,21 +9,16 @@ class AdminController {
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'dbjava'
+            database: 'nodejs_courses'
           });
 
         con.connect(function(err){
-            // if (err) {
-            //     return console.error('error: ' + err.message);
-            //   }
+            if (err) {
+                return console.error('error: ' + err.message);
+              }
             
-            //   console.log('Connected to the MySQL server.');
-
-            if(err) throw err;
-            con.query('SELECT * FROM table1' , function(err, result, fields){
-                if(err) throw err;
-                console.log(result);
-            })
+              console.log('Connected to the MySQL server.');
+              
         })
 
 

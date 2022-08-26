@@ -7,14 +7,13 @@ class CourseController {
     }
 
     listCourse(req,res){
-
-        res.send('')    
+        res.send(req.params.slug)    
     }
 
 
     addCourse(req, res , next){
 
-        res.send(req.body)
+        // res.send(req.body)
 
         const con = mysql.createConnection({
             host: 'localhost',
@@ -38,6 +37,8 @@ class CourseController {
                 }
             })
         })
+        
+        res.redirect('/');
     }
     
 
