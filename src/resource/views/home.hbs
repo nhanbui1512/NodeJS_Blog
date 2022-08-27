@@ -1,80 +1,514 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/app.css">
-  <link rel="stylesheet" href="/css/css/all.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="container-header">
-        <div class="header-logo">
-          <img src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="">
-        </div>
-        <div class="header-nav">
-          <ul class="header-nav-container">
-            <li class="header-nav-container_item bor-bot-black" >Trang Chủ</li>
-            <li class="header-nav-container_item" >Sản Phẩm</li>
-            <li class="header-nav-container_item" >Store</li>
-            <li class="header-nav-container_item" >Giới Thiệu</li>
-          </ul>
-        </div>
-        <div class="header-search">
-          <i class="fa-thin fa-magnifying-glass"></i>
-          <input type="text" placeholder="Tìm kiếm sản phẩm">
-        </div>
-
-        <div class="header-cart">
-          <i class="fa-thin fa-cart-shopping"></i>
-          <span>Giỏ Hàng</span>
-          <span class="header-car_amount">0</span>
-        </div>
+<div class="header-image">
+  <img src="/image/z3639760698258_2bb7aabd56eee9bad5c1b00a537b0265_ac7e517daa8e49d2b114b9a546a45cd8.webp" alt="">
+</div>
+    
+  <div class="promotion-container col">
+    <h2 class="promotion-title" >Đặc quyền cho bạn hôm nay!</h2>
+    <div class="row">
+      <div class="promotion-item col">
+        <span class="promotion-item_header">Degrey giao hoả tốc</span>
+        <span class="promotion-item_description">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn</span>
       </div>
-    </header>
-
-    <div class="header-image">
-      <img src="/img/z3639760698258_2bb7aabd56eee9bad5c1b00a537b0265_ac7e517daa8e49d2b114b9a546a45cd8.webp" alt="">
-    </div>
-
-    <div class="promotion-container col">
-      <h2 class="promotion-title" >Đặc quyền cho bạn hôm nay!</h2>
-      <div class="row">
-        <div class="promotion-item col-sm">
-          <span class="promotion-item_header">Degrey giao hoả tốc</span>
-          <span class="promotion-item_description">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn</span>
-        </div>
-        <div class="promotion-item col-sm">
-          <span class="promotion-item_header">Degrey giao hoả tốc</span>
-          <span class="promotion-item_description">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn</span>
-        </div>
-
-        <div class="promotion-item col-sm">
-          <span class="promotion-item_header">Degrey giao hoả tốc</span>
-          <span class="promotion-item_description">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn</span>
-        </div>
-        <div class="promotion-item col-sm">
-          <span class="promotion-item_header">Degrey giao hoả tốc</span>
-          <span class="promotion-item_description">Giờ đây bạn có thể nhận hàng nhanh trong ngày mà không cần chờ đợi tại Sài Gòn</span>
-        </div>
-
-        
+      <div class="promotion-item col">
+        <span class="promotion-item_header">Hà Nội Freeship</span>
+        <span class="promotion-item_description">Degrey dành tặng Hà Nội mã freeship 0đ (số lượng có hạn)</span>
+        <button class="promotion-coppy">Sao chép mã</button>
       </div>
-    </div>
 
+      <div class="promotion-item col">
+        <span class="promotion-item_header">Tặng 125.000đ</span>
+        <span class="promotion-item_description">Áp dụng đặc biệt cho đơn hàng từ 2,5 triệu đồng.</span>
+        <button class="promotion-coppy">Sao chép mã</button>
+
+      </div>
+      <div class="promotion-item col">
+        <span class="promotion-item_header">Khuyến mãi đến 10%</span>
+        <span class="promotion-item_description">Mã giảm 10% cho hoá đơn mua hàng trên 5 triệu đồng</span>
+        <button class="promotion-coppy">Sao chép mã</button>
+
+      </div>
+
+      
+    </div>
   </div>
-</body>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</html>
+
+  <div class="product-slider-container">
+    <div class="product-slider_header">
+      <div class="product-slider_header-img">
+        <img src="/image/fb1088de81e42c4e538967ec12cb5caa_24c3f22fd286428eaf97e5e0a042090d.webp" alt="">
+      </div>
+      <a href="">Xem tất cả</a>
+    </div>
+
+    <div class="section-flash">
+      
+
+      <div class="section-flash_slide">
+          
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/4f1e27ec-e723-4d75-93bb-85d450b77db0_9b9f1e4b2a4649ccbcfe007330efe538_master.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Giờ Giải Lao - GGL</a>
+            <p>220,000₫</p>
+          </div>
+
+          <span class="sale-value">35%</span>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/f20393bf6ee7aeb9f7f6_49adc6db42e64b84903aa3967b5364d3_master.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Degrey Premium Leather Jacket Đen - DPLJ Đen</a>
+            <p>720,000₫</p>
+          </div>
+          <span class="sale-value">35%</span>
+
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/18167b1a-d7c3-41fa-b70c-c9624d58fc16_cf219ca5be624c7eb8a71bb2cbae7894_master.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Giờ Giải Lao Đen - GGL Đen</a>
+            <p>220,000₫</p>
+          </div>
+          <span class="sale-value">35%</span>
+
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839972939_b81a8c546b4a2c5594acac3a9ceebccd_179cc5f052d649d8a97fdc0088f2790b_master.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3641717732035_93fc9742ef0895b9b4d5ae6053257317_ecc4d1bc414a430da9dae04228baed52_master.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Xấu Lên Bờ Green - AXLB Green</a>
+            <p>250,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+        
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="/image/z3433839928870_65802571aaddce7ede99fd71b97a377d_1139b9597bee49ab878a647be0d17f97_large.webp" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+            <p>220,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
+      </div>
+
+      <button class="section-flash_backbtn"><i class="fa-thin fa-angle-left"></i></button>
+      <button class="section-flash_nextbtn"><i class="fa-thin fa-angle-right"></i></button>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <div class="product-list-header">
+      <h2>
+        <a href="">BACKPACKS | BALO</a>
+      </h2>
+
+      <a href="">Xem tất cả</a>
+
+    </div>
+
+    <div class="product-list-container">
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/1496_b97a5425c8c247e596b08102b428ca40_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Balo Lưới Degrey - BLD</a>
+          <p>390,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/1606_72e31746f97e4b1e8b220d231776dbf3_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Degrey Premium Leather Backpack - PLBP</a>
+          <p>490,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/6494b116-a95f-42e1-bd99-33ae0fef78a3_c36ead4edfde4943b98b4ad16eb74463_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Balo Hạt Nhân Degrey - BHND</a>
+          <p>420,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/e8d300a9-a2cc-4612-9b0a-4404dd8fc561_06b57e02648b4120abf61650a1f9a3e9_master.webp  " alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Degrey Tiedye Backpack - DTDB</a>
+          <p>390,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/026c52bc-e4d4-4705-bb4e-cb146982d536_d1fc07bab7854243a07aff61cf671f6d_master.jpeg" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">TieDye BackPack Dark Green - TDBP dark green</a>
+          <p>420,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/bbd_2c494632e83d4c20b543a37e75104dff_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Basic Backpack Degrey - BBD</a>
+          <p>390,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/300_e2b80b862fd2499f858a17736ac4a613_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Basic Backpack Degrey Xám - BBD Xám</a>
+          <p>390,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/551_4b4b87228bef440a8c6bd50f6ce3ccca_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Basic Backpack Degrey Trắng - BBD Trắng</a>
+          <p>390,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/02545223-210d-42de-87e1-6ab9972d8909_da1f984debd8437e840cb51be29e6aa1_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Degrey Letter Backpack - DLBP</a>
+          <p>420,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/z3448826597830_67f0c8a438c2dc5b39feb4d80eca47bf_61a521c030384a9c8bee8ff40137cb56_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Mono Degrey Backpack - MDB</a>
+          <p>490,000₫</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="product-list-footer">
+      <a href="/collection/balo" class="button">Xem thêm sản phẩm BACKPACKS | BALO</a>
+    </div>
+  </div>
+
+  <div class="product-list">
+    <div class="product-list-header">
+      <h2>
+        <a href="">ÁO KHOÁC | JACKET</a>
+      </h2>
+
+      <a href="">Xem tất cả</a>
+
+    </div>
+
+    <div class="product-list-container">
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/img_9666_b4ab6d11a3414b8ab5421a63cee626eb_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Zipped Hoodie Degrey Black - ZHD Black</a>
+          <p>450,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/img_9671_520c0933a74c464289dbe55466f641f2_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Zipped Hoodie Degrey Green - ZHD Green</a>
+          <p>450,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/z3433840018199_4d474f588c5ab675cd9f766c93d3dc4a_06b961b9260e44819e01d783ce2f9a68_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Panda Green - AKPD Green</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/z3433839972939_b81a8c546b4a2c5594acac3a9ceebccd_179cc5f052d649d8a97fdc0088f2790b_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Panda Blue - AKPD Blue</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/z3433840134022_59c5060334e2211ef697f223a14cec47_7c89eb697095451886ff980531d3a32d_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Panda Đỏ - AKPD Đỏ</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/z3433839947866_91cb656f6e74151a344d07dd0de214d9_6e703243609b4f4ebc77bfc5273b05e2_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Panda Nâu - AKPD Nâu</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/18167b1a-d7c3-41fa-b70c-c9624d58fc16_cf219ca5be624c7eb8a71bb2cbae7894_master (1).webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Giờ Giải Lao Đen - GGL Đen</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/4f1e27ec-e723-4d75-93bb-85d450b77db0_9b9f1e4b2a4649ccbcfe007330efe538_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Áo Khoác Giờ Giải Lao - GGL</a>
+          <p>220,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/f20393bf6ee7aeb9f7f6_49adc6db42e64b84903aa3967b5364d3_master (1).webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Degrey Premium Leather Jacket Đen - DPLJ Đen</a>
+          <p>720,000₫</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <div class="product-item_image">
+          <img src="/image/1672_15853b8da6d44c629151125decd30c5c_master.webp" alt="">
+        </div>
+        <div class="product-item_description">
+          <a href="">Degrey Premium Leather Jacket - DPLJ</a>
+          <p>720,000₫</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="product-list-footer">
+      <a class="button">Xem thêm sản phẩm ÁO KHOÁC | JACKET</a>
+    </div>
+  </div>
+
+<script>
+      var coppybtns = document.querySelectorAll('.promotion-coppy');
+      for (let i = 0; i < coppybtns.length; i++) {
+        coppybtns[i].addEventListener('click', function(){
+          coppybtns[i].textContent = 'Đã sao chép'
+        })
+        
+      }
+
+      var slider = document.querySelector('.section-flash_slide');
+
+      var nextbtn = document.querySelector('.section-flash_nextbtn');
+      var backbtn = document.querySelector('.section-flash_backbtn');
+      var items = document.querySelectorAll('.section-flash_item')
+
+      var count = 0
+      
+      var widthSlider = 220 * (items.length - 5);
+
+      nextbtn.addEventListener('click', function(){
+          if(count < widthSlider){
+              count += 438;
+          }
+          slider.style.transform = `translateX(-${count}px)`;
+      })
+
+      backbtn.addEventListener('click', function(){
+
+          if(count > 0){
+              count -= 438;
+          }
+          slider.style.transform = `translateX(-${count}px)`;
+      })
+
+
+      setInterval(() => {
+        nextbtn.click();
+      }, 10000);
+
+
+
+
+</script>
