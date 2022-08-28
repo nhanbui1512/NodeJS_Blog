@@ -1,25 +1,41 @@
-<header class="header">
-  <div class="container-header">
-    <div class="header-logo">
-      <img src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="">
-      </div>
-    <div class="header-nav">
-      <ul class="header-nav-container">
-        <li class="header-nav-container_item bor-bot-black" >Trang Chủ</li>
-        <li class="header-nav-container_item" >Sản Phẩm</li>
-        <li class="header-nav-container_item" >Store</li>
-        <li class="header-nav-container_item" >Giới Thiệu</li>
-      </ul>
-    </div>
-    <div class="header-search">
-      <i class="fa-thin fa-magnifying-glass"></i>
-      <input type="text" placeholder="Tìm kiếm sản phẩm">
-    </div>
+<div id="header">
+  <div class="container">
+    <header class="header">
+      <div class="container-header">
+        <div class="header-logo">
+          <img src="https://file.hstatic.net/1000281824/file/tote-1_33445b051a404bb790b6d0df0275ac8d.png" alt="">
+          </div>
+        <div class="header-nav">
+          <ul class="header-nav-container">
+            <li class="header-nav-container_item bor-bot-black" ><a href="/">Trang Chủ</a></li>
+            <li class="header-nav-container_item" > <a href="#">Sản Phẩm</a></li>
+            <li class="header-nav-container_item" > <a href="#">Store</a> </li>
+            <li class="header-nav-container_item" ><a href="#">Giới Thiệu</a></li>
+          </ul>
+        </div>
+        <div class="header-search">
+          <i class="fa-thin fa-magnifying-glass"></i>
+          <input type="text" placeholder="Tìm kiếm sản phẩm">
+        </div>
 
-    <div class="header-cart">
-      <i class="fa-thin fa-cart-shopping"></i>
-      <span>Giỏ Hàng</span>
-      <span class="header-car_amount">0</span>
-    </div>
+        <div class="header-cart">
+          <i class="fa-thin fa-cart-shopping"></i>
+          <span>Giỏ Hàng</span>
+          <span class="header-car_amount">0</span>
+        </div>
+      </div>
+    </header>
+
   </div>
-</header>
+</div>
+
+
+<script>
+  var headerNavBtns = document.querySelectorAll('.header-nav-container_item');
+  for(let i = 0 ; i < headerNavBtns.length ; i++){
+    headerNavBtns[i].onclick = function(){
+      var link = headerNavBtns[i].querySelector('a');
+      link.click();
+    }
+  }
+</script>
