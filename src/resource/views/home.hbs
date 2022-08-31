@@ -238,110 +238,26 @@
         <a href="">BACKPACKS | BALO</a>
       </h2>
 
-      <a href="">Xem tất cả</a>
+      <a href="/collection/balo">Xem tất cả</a>
 
     </div>
 
     <div class="product-list-container">
-      <div class="product-item">
+
+      {{#each listbalo}}
+
+        <div class="product-item">
         <div class="product-item_image">
-          <img src="/image/1496_b97a5425c8c247e596b08102b428ca40_master.webp" alt="">
+          <img src="{{this.urlAnh}}" alt="">
         </div>
         <div class="product-item_description">
-          <a href="">Balo Lưới Degrey - BLD</a>
-          <p>390,000₫</p>
+          <a href="">{{this.TenSanPham}}</a>
+          <p>{{this.GiaSanPham}},000₫</p>
         </div>
       </div>
 
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/1606_72e31746f97e4b1e8b220d231776dbf3_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Degrey Premium Leather Backpack - PLBP</a>
-          <p>490,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/6494b116-a95f-42e1-bd99-33ae0fef78a3_c36ead4edfde4943b98b4ad16eb74463_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Balo Hạt Nhân Degrey - BHND</a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/e8d300a9-a2cc-4612-9b0a-4404dd8fc561_06b57e02648b4120abf61650a1f9a3e9_master.webp  " alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Degrey Tiedye Backpack - DTDB</a>
-          <p>390,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/026c52bc-e4d4-4705-bb4e-cb146982d536_d1fc07bab7854243a07aff61cf671f6d_master.jpeg" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">TieDye BackPack Dark Green - TDBP dark green</a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/bbd_2c494632e83d4c20b543a37e75104dff_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Basic Backpack Degrey - BBD</a>
-          <p>390,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/300_e2b80b862fd2499f858a17736ac4a613_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Basic Backpack Degrey Xám - BBD Xám</a>
-          <p>390,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/551_4b4b87228bef440a8c6bd50f6ce3ccca_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Basic Backpack Degrey Trắng - BBD Trắng</a>
-          <p>390,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/02545223-210d-42de-87e1-6ab9972d8909_da1f984debd8437e840cb51be29e6aa1_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Degrey Letter Backpack - DLBP</a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div class="product-item_image">
-          <img src="/image/z3448826597830_67f0c8a438c2dc5b39feb4d80eca47bf_61a521c030384a9c8bee8ff40137cb56_master.webp" alt="">
-        </div>
-        <div class="product-item_description">
-          <a href="">Mono Degrey Backpack - MDB</a>
-          <p>490,000₫</p>
-        </div>
-      </div>
+      {{/each}}
+      
 
     </div>
 
@@ -354,6 +270,39 @@
     <div class="product-list-header">
       <h2>
         <a href="">ÁO KHOÁC | JACKET</a>
+      </h2>
+
+      <a href="/collection/jacket">Xem tất cả</a>
+
+    </div>
+
+    <div class="product-list-container">
+
+      {{#each listjacket}}
+        <div class="product-item">
+          <div class="product-item_image">
+            <img src="{{this.urlAnh}}" alt="">
+          </div>
+          <div class="product-item_description">
+            <a href="">{{this.TenSanPham}}</a>
+            <p>{{this.GiaSanPham}},000đ</p>
+          </div>
+        </div>
+      {{/each}}
+      
+
+    </div>
+
+    <div class="product-list-footer">
+      <a href="/collection/jacket" class="button">Xem thêm sản phẩm ÁO KHOÁC | JACKET</a>
+    </div>
+  </div>
+
+
+  <div class="product-list">
+    <div class="product-list-header">
+      <h2>
+        <a href="">ÁO THUN | TSHIRT</a>
       </h2>
 
       <a href="">Xem tất cả</a>
@@ -465,9 +414,11 @@
     </div>
 
     <div class="product-list-footer">
-      <a class="button">Xem thêm sản phẩm ÁO KHOÁC | JACKET</a>
+      <a href="/collection/jacket" class="button">Xem thêm sản phẩm ÁO KHOÁC | JACKET</a>
     </div>
   </div>
+
+  
 
 <script>
       var coppybtns = document.querySelectorAll('.promotion-coppy');
@@ -509,6 +460,24 @@
       }, 10000);
 
 
+  var nodeMain = document.querySelectorAll('.product-list')[1];
 
+  list = [];
+  console.log(nodeMain)
+
+  var listItem = nodeMain.querySelectorAll('.product-item');
+
+  for(let i = 0 ; i < listItem.length ; i++){
+    var urlImage = listItem[i].querySelector('img').src.split('http://localhost:3000')[1];
+    var name = listItem[i].querySelector('.product-item_description a').textContent
+    var price = listItem[i].querySelector('.product-item_description p').textContent
+
+    list[i] = {
+      urlImage: urlImage,
+      name: name,
+      price: price,
+    }
+  }
+  console.log(JSON.stringify(list))
 
 </script>

@@ -55,6 +55,9 @@ button:focus{
     cursor: pointer;
 
 }
+.header-logo a{
+    display: block;
+}
 .header-logo img{
     width: 86px;
     height: 100%;

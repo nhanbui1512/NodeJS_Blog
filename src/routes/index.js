@@ -1,28 +1,20 @@
-const newsRouter = require('./news');
+
 const adminRouter = require('./admin');
-const courseRouter = require('./course');
 const collectionRouter = require('./collection');
+const loginRouter = require('./login.router');
+const authMidleware = require('../middleware/auth.middleware')
+const homeRouter = require('./home.router');
 
 function route(app){
 
 
-    app.use('/news',newsRouter);
-
-    app.use('/course',courseRouter);
-
-    app.use('/admin', adminRouter);
+    app.use('/admin',adminRouter);
     
     app.use('/collection', collectionRouter)
 
-    // app.use('/', (req, res) => {
-    //   res.render('home', {layout: false})
-    // })
+    app.use('/login', loginRouter);
 
-    app.get('/', (req, res) => {
-
-        res.render('home');
-      })
-      
+    app.use('/',homeRouter);
     
 }
 module.exports = route;

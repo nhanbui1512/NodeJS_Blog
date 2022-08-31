@@ -9,26 +9,34 @@ const con = mysql.createConnection({
 });
 con.connect();
 
-
 class CollectionController { 
 
     //GET /news
     index(req, res){
 
-        var data;
-        var query = `SELECT sanpham.IDSanPham, sanpham.TenSanPham, sanpham.GiaSanPham, sanpham.UrlAnh, loaihang.TenLoaiHang FROM sanpham, loaihang WHERE loaihang.SlugLoaiHang = '${req.params.slug}' `
+        var data = [];
+        var query = `SELECT sanpham.IDSanPham, sanpham.TenSanPham, sanpham.GiaSanPham, sanpham.UrlAnh, loaihang.TenLoaiHang FROM sanpham, loaihang WHERE loaihang.SlugLoaiHang = '${req.params.slug}' AND loaihang.IDLoaiHang = sanpham.IDLoaiHang; `
         
-
         con.query(query , function(err, result, fields){
-            if(err) {
-                console.log('Errro' + err);
+
+            try {
+                
+                if(err) {
+                    console.log('Errro' + err);
+                }
+                else{
+                    data = result;
+                    res.render('collection', {data: data , nameCollection: data[0].TenLoaiHang})
+                }
+              }
+
+            catch(err) {
+                res.send('Page Not Found')
             }
-            else{
-                data = result;
-                res.render('collection', {data: data , nameCollection: data[0].TenLoaiHang})
-            }
+
 
         });
+
 
 
     }
@@ -43,7 +51,6 @@ class CollectionController {
 
     addProduct(req,res){
 
-
         var proDuct = {
             name: req.body.name,
             price: req.body.price,
@@ -54,22 +61,16 @@ class CollectionController {
 
         var stringquery = `INSERT INTO sanpham (IDLoaiHang, TenSanPham, GiaSanPham , KhuyenMai, UrlAnh ) VALUES ('${proDuct.idLoaiHang}','${proDuct.name}','${proDuct.price}','0','${proDuct.url}')`;
 
-        con.connect(function(err){
-            if (err) 
-                return console.error('error: ' + err.message);
+        con.query(stringquery , function(err, result, fields){
+            if(err) {
+                console.log('Errro' + err);
+            }
+            else{
+                // console.log('Insert successed!!');
+            }
+        })
 
-            con.query(stringquery , function(err, result, fields){
-                if(err) {
-                    console.log('Errro' + err);
-                }
-                else{
-                    console.log('Insert successed!!');
-                }
-            })
-
-        });
-
-        res.redirect('/collection/balo')
+        res.send('insert sucsessed ');
           
     }
 
