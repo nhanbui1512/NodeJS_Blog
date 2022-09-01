@@ -1,5 +1,7 @@
 // const { query } = require('express');
 const mysql = require('mysql');
+const session = require('express-session')
+
 
 const con = mysql.createConnection({
     host: 'localhost',
@@ -30,7 +32,7 @@ function getRecord(name)
 class loginController { 
 
     //GET /news
-    index(req, res){
+    index(req, res,next){
         res.render('login' , {layout : false});
     }
 
@@ -40,13 +42,23 @@ class loginController {
 
         getRecord('user')
             .then( function(rows){
+                console.log(rows)
                 for (let i = 0; i < rows.length; i++) {
                     if(email == rows[i].email && password == rows[i].password){
-                        res.cookie('userid', rows[i].userid);
-                        return res.redirect('/')
+                        req.session.userid = rows[i].userid;
+                        req.session.email = rows[i].email;
+                        req.session.permission = rows[i].permission;
+                        if(rows[i].permission == 1){
+                            res.redirect('/admin')
+                            return;
+                        }
+                        else{ res.redirect('/')
+                            return;
+                        }
                     }
-                    return res.redirect('/login')
                 }
+                return res.redirect('/login')
+
             })
         
     }

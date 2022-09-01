@@ -4,11 +4,18 @@ const hbs  = require('express-handlebars');
 const path = require('path')
 const app = express();
 const port = 3000;
+const session = require('express-session');
+
 
 
 const route = require('./routes')
 
-
+app.use(session({
+  secret: 'secret-key',
+  resave: false,
+  saveUninitialized: false,
+  
+}))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({
   extended: true

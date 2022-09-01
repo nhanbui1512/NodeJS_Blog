@@ -8,7 +8,7 @@ const homeRouter = require('./home.router');
 function route(app){
 
 
-    app.use('/admin',adminRouter);
+    app.use('/admin',authMidleware.requireAuth,adminRouter);
     
     app.use('/collection', collectionRouter)
 

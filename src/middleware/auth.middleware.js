@@ -1,4 +1,6 @@
 const mysql = require('mysql');
+const session = require('express-session')
+
 const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -20,21 +22,18 @@ function getRecord(name)
     });
 }
 
-function findUser (userid) {
-    getRecord('user')
-        .then(function(rows){
-            for (let i = 0; i < rows.length; i++) {
-                if(rows[i].userid == userid ){
-                    return true;
-                }
-            }
-            return false;
-        })
-}
 
 module.exports.requireAuth = function(req, res, next){
+    if(req.session.userid == undefined){
+        res.redirect('/login');
+        return;
+    }
+
+    if(req.session.permission != 1){
+        res.redirect('/login');
+        return;
+    }
     
-    // console.log(req.cookies.userid.value());
     next();
 
 }
