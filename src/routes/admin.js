@@ -4,7 +4,6 @@ const authMidleware = require('../middleware/auth.middleware');
 const adminController = require('../app/controllers/adminController');
 
 
-
-router.use('/',authMidleware.requireAuth,adminController.index);
+router.use('/',adminController.index);
 
 module.exports = router;

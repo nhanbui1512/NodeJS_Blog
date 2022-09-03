@@ -12,7 +12,7 @@ class homeController {
         var listtee = [];
         var result = dbHelper.getRecord('sanpham')
             .then(function(rows){
-                for (let i = 0; i < rows.length; i++) {
+                for (let i = rows.length - 1 ; i >= 0 ; i--) {
                     if(rows[i].IDLoaiHang == '1' && listbalo.length < 10 ){
                         listbalo.push({IDSanPham: rows[i].IDSanPham , TenSanPham: rows[i].TenSanPham , GiaSanPham: rows[i].GiaSanPham, urlAnh: rows[i].UrlAnh })
                     }
@@ -23,7 +23,6 @@ class homeController {
                         listtee.push({IDSanPham: rows[i].IDSanPham , TenSanPham: rows[i].TenSanPham , GiaSanPham: rows[i].GiaSanPham, urlAnh: rows[i].UrlAnh })
                     }
                 }
-
                 res.render('home', {listbalo: listbalo , listjacket: listjacket, listtee: listtee});
 
         });

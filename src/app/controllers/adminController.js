@@ -13,7 +13,9 @@ class AdminController {
 
     //GET /news
     index(req, res){
-        res.render('admin');
+        res.render('admin', {
+            layout: false
+        });
           
     }
     login(req,res){

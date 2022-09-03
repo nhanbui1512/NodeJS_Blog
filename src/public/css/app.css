@@ -369,7 +369,7 @@ button:focus{
     line-height: normal;
     color: #fff !important;
     background-color: #8b572a;
-    border: 1px solid #8b572a;
+    /* border: 1px solid #8b572a; */
     font-size: 13px;
     font-weight: 500;
     text-align: center;
@@ -381,6 +381,11 @@ button:focus{
     transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     cursor: pointer;
+}
+
+.button:hover{
+    background-color: #000;
+    color: #fff !important;
 }
 
 .breadcrumb-shop ul{
