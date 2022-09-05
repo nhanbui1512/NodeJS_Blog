@@ -21,10 +21,31 @@
           <input type="text" placeholder="Tìm kiếm sản phẩm">
         </div>
 
-        <div class="header-cart">
+        <div class="header-cart relative">
           <i class="fa-thin fa-cart-shopping"></i>
           <span>Giỏ Hàng</span>
           <span class="header-car_amount">0</span>
+
+            <div class="cart-dropdown">
+              <div class="col">
+                <p class="cart-dropdown_header">GIỎ HÀNG</p>
+                <div class="cart-view-scroll">
+                  <div class="cart-empty">
+                    <i class="cart-empty_icon fa-thin fa-cart-shopping"></i>
+                    <p>Hiện chưa có sản phẩm</p>
+                  </div>
+                </div>
+
+                <div class="cart-dropdown_bottom">
+                  <div class="cart-dropdown_total">
+                    <div class="cart-dropdown_total-text">TỔNG TIỀN:</div>
+                    <div class="cart-dropdown_total-price">0đ</div>
+                  </div>
+
+                  <button class="cart-dropdown_viewall" >XEM GIỎ HÀNG</button>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </header>
@@ -41,4 +62,18 @@
       link.click();
     }
   }
+
+
+  var cartBtn = document.querySelector('.header-cart ')
+  var cartDropdown = document.querySelector('.cart-dropdown')
+  cartBtn.addEventListener('click', function(){
+    if(cartDropdown.className.includes('js-cart-dropdown')){
+      cartDropdown.classList.remove('js-cart-dropdown')
+    }
+    else{
+    cartDropdown.classList.add('js-cart-dropdown')
+
+    }
+  })
+
 </script>

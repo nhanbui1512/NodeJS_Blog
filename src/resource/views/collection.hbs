@@ -81,11 +81,11 @@
 
       {{#each data}}
         <div class="product-item">
-          <div class="product-item_image">
+          <a href="/product/{{this.IDSanPham}}" class="product-item_image">
             <img src="{{this.UrlAnh}}" alt="">
-          </div>
+          </a>
           <div class="product-item_description">
-            <a href="">{{this.TenSanPham}}</a>
+            <a href="/product/{{this.IDSanPham}}">{{this.TenSanPham}}</a>
             <p>{{this.GiaSanPham}},000đ</p>
           </div>
         </div>

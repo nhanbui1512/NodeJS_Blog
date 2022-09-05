@@ -27,7 +27,6 @@ class homeController {
 
         });
 
-        // res.render('home');
           
     }
 
