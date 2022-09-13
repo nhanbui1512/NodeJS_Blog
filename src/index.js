@@ -2,14 +2,13 @@ const express = require('express');
 const morgan = require('morgan');
 const hbs  = require('express-handlebars');
 const path = require('path')
+const cookieParser = require('cookie-parser');
+
 const app = express();
-const port = 3000;
+const port = 3001;
 const session = require('express-session');
-
-
-
 const route = require('./routes')
-
+app.use(cookieParser())
 app.use(session({
   secret: 'secret-key',
   resave: false,
@@ -21,9 +20,6 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
-// app.use(morgan('combined'))
-
-//template engine 
 
 app.engine('hbs', hbs.engine({
   extname: '.hbs'

@@ -91,7 +91,7 @@
                                                     
                                                     <li class="product-thumb" data-image="//product.hstatic.net/1000281824/product/541_e09d798fb1f741cf94f4cfac24ab8b0d_compact.jpg">
                                                         <a class="product-thumb__item"  href="javascript:void(0);" >					
-                                                            <img src="//product.hstatic.net/1000281824/product/541_e09d798fb1f741cf94f4cfac24ab8b0d_compact.jpg" alt=" Balo Quốc D&#226;n Trắng - BQD Trắng ">
+                                                            <img src="{{sanpham.UrlAnh}}" alt=" Balo Quốc D&#226;n Trắng - BQD Trắng ">
                                                         </a>					
                                                     </li>	
                                                     
@@ -174,7 +174,6 @@
                                             </div>
                                             <div class="productGallery_slider rel">	
                                                 <ul class="productList-slider productSlick-slider" id="productSlick-slider">
-                                                    
                                                     
                                                     <li class="product-gallery"  data-image="//product.hstatic.net/1000281824/product/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.jpg"   >
                                                         <img src="{{sanpham.UrlAnh}}" alt=" Balo Quốc D&#226;n Trắng - BQD Trắng ">	
@@ -778,7 +777,23 @@
             quantityCart.textContent = quantityCartNumber
         })
 
+        var productThumb = document.querySelectorAll('.product-thumb');
 
+        for(var i = 0 ; i < productThumb.length ; i ++){
+            productThumb[i].setAttribute("index",i)
+        }
+
+
+
+        for(var i = 0 ; i < productThumb.length ; i++){
+            productThumb[i].onclick = function(e){
+                var item = e.target.parentElement.parentElement
+
+                count = item.getAttribute("index")*100;
+                slider.style.transform = `translateX(-${count}%)`;
+                
+            }
+        }
 
     </script>
 </html>

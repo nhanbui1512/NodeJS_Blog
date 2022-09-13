@@ -121,9 +121,16 @@
     
   }
   
-  console.log(JSON.stringify(listProduct))
+  
+  var postApi = 'http://localhost:3000/';
 
-  const list = [{"urlimg":"/image/1496_b97a5425c8c247e596b08102b428ca40_master.webp","nameProduct":"Balo Lưới Degrey - BLD","price":"390,000₫"},{"urlimg":"/image/1606_72e31746f97e4b1e8b220d231776dbf3_master.webp","nameProduct":"Degrey Premium Leather Backpack - PLBP","price":"490,000₫"},{"urlimg":"/image/6494b116-a95f-42e1-bd99-33ae0fef78a3_c36ead4edfde4943b98b4ad16eb74463_master.webp","nameProduct":"Balo Hạt Nhân Degrey - BHND","price":"420,000₫"},{"urlimg":"/image/e8d300a9-a2cc-4612-9b0a-4404dd8fc561_06b57e02648b4120abf61650a1f9a3e9_master.webp","nameProduct":"Degrey Tiedye Backpack - DTDB","price":"390,000₫"},{"urlimg":"/image/026c52bc-e4d4-4705-bb4e-cb146982d536_d1fc07bab7854243a07aff61cf671f6d_master.jpeg","nameProduct":"TieDye BackPack Dark Green - TDBP dark green","price":"420,000₫"},{"urlimg":"/image/bbd_2c494632e83d4c20b543a37e75104dff_master.webp","nameProduct":"Basic Backpack Degrey - BBD","price":"390,000₫"},{"urlimg":"/image/300_e2b80b862fd2499f858a17736ac4a613_master.webp","nameProduct":"Basic Backpack Degrey Xám - BBD Xám","price":"390,000₫"},{"urlimg":"/image/551_4b4b87228bef440a8c6bd50f6ce3ccca_master.webp","nameProduct":"Basic Backpack Degrey Trắng - BBD Trắng","price":"390,000₫"},{"urlimg":"/image/02545223-210d-42de-87e1-6ab9972d8909_da1f984debd8437e840cb51be29e6aa1_master.webp","nameProduct":"Degrey Letter Backpack - DLBP","price":"420,000₫"},{"urlimg":"/image/z3448826597830_67f0c8a438c2dc5b39feb4d80eca47bf_61a521c030384a9c8bee8ff40137cb56_master.webp","nameProduct":"Mono Degrey Backpack - MDB","price":"490,000₫"},{"urlimg":"/image/35a222ce-36a9-41a5-99c6-4922fc612e5b_f76f0027eb0c4485bef8a96d74a9c57c_master.webp","nameProduct":"Balo Degrey Graffiti - BDG","price":"420,000₫"},{"urlimg":"/image/1499_f6717e74f4434177ac7a06b59cd947f2_master.webp","nameProduct":"Balo Nắp Degrey - BND","price":"390,000₫"},{"urlimg":"/image/fbae2fcc-d769-481c-a5a7-790010157fe7_896444fa114741d68da98093a94135c1_master.webp","nameProduct":"Balo Gấu Tiedye - BGTD","price":"420,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"},{"urlimg":"/image/541_e09d798fb1f741cf94f4cfac24ab8b0d_master.webp","nameProduct":"Balo Quốc Dân Trắng - BQD Trắng","price":"250,000₫"}]
+  fetch(postApi) 
+    .then( (res) => {
+      return res.json();
+    })
+    .then( (posts) => {
+      console.log(posts)
+    })
 
 </script>
 
