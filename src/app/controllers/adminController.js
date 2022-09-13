@@ -1,27 +1,30 @@
-var mysql = require('mysql');
+// var mysql = require('mysql');
 
-var con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'nodejs_courses'
-  });
+// var con = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '',
+//     database: 'nodejs_courses'
+//   });
 
-con.connect();
+// con.connect();
 
 class AdminController { 
 
-    //GET /news
     index(req, res){
-        res.render('admin', {
-            layout: false
+        res.render('admin/admin.hbs', {
+            layout: 'admin.layout.hbs'
         });
           
     }
-    login(req,res){
-        res.render('adminLogin');
+
+    product(req, res){
+        res.render('admin/product.hbs' , 
+           {
+            layout: false
+           }
+        )
     }
-    
 
 }
 module.exports = new AdminController;

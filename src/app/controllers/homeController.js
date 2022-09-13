@@ -42,8 +42,8 @@ class homeController {
                         listtee.push({IDSanPham: rows[i].IDSanPham , TenSanPham: rows[i].TenSanPham , GiaSanPham: rows[i].GiaSanPham, urlAnh: rows[i].UrlAnh })
                     }
                 }
-                // res.render('home', {listbalo: listbalo , listjacket: listjacket, listtee: listtee});
-                res.send(JSON.stringify(listbalo))
+                res.render('home', {listbalo: listbalo , listjacket: listjacket, listtee: listtee});
+                // res.send(JSON.stringify(listbalo))
 
 
 

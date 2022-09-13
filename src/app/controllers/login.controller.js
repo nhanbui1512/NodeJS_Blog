@@ -42,7 +42,6 @@ class loginController {
 
         getRecord('user')
             .then( function(rows){
-                console.log(rows)
                 for (let i = 0; i < rows.length; i++) {
                     if(email == rows[i].email && password == rows[i].password){
                         req.session.userid = rows[i].userid;
