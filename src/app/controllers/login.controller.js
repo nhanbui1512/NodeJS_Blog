@@ -62,5 +62,11 @@ class loginController {
         
     }
 
+
+    logOut(req, res){
+        req.session.destroy();
+        res.redirect('/')
+    }
+
 }
 module.exports = new loginController;

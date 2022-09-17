@@ -8,16 +8,12 @@ const productRouter = require('./products');
 const cartRouter = require('./cart');
 
 function route(app){
-
-    app.use('/admin',adminRouter);
     
+    app.use('/admin',adminRouter);
     app.use('/collection', collectionRouter)
-
     app.use('/login', loginRouter);
     app.use('/product',productRouter)
     app.use('/cart',cartRouter)
-
     app.use('/',homeRouter);
-    
 }
 module.exports = route;

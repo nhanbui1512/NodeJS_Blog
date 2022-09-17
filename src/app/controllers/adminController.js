@@ -1,30 +1,22 @@
-// var mysql = require('mysql');
-
-// var con = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'nodejs_courses'
-//   });
-
-// con.connect();
+const session = require('express-session')
 
 class AdminController { 
 
     index(req, res){
-        res.render('admin/admin.hbs', {
-            layout: 'admin.layout.hbs'
+        res.render('admin', {
+            layout: 'adminLayout.hbs'
         });
           
     }
-
     product(req, res){
-        res.render('admin/product.hbs' , 
-           {
-            layout: false
-           }
+        res.render('productManager' ,
+            {
+                layout: 'adminLayout.hbs'
+            }
         )
     }
+
+   
 
 }
 module.exports = new AdminController;

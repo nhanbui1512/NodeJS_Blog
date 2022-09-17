@@ -3,11 +3,14 @@ const morgan = require('morgan');
 const hbs  = require('express-handlebars');
 const path = require('path')
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const route = require('./routes')
+
+
 
 const app = express();
 const port = 3000;
-const session = require('express-session');
-const route = require('./routes')
+
 app.use(cookieParser())
 app.use(session({
   secret: 'secret-key',
@@ -15,7 +18,7 @@ app.use(session({
   saveUninitialized: false,
   
 }))
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({
   extended: true
 }));
@@ -26,6 +29,7 @@ app.engine('hbs', hbs.engine({
 }));
 app.set('view engine', 'hbs');
 app.set('views',path.join(__dirname,'resource/views'))
+
 
 route(app);
 
