@@ -6,7 +6,7 @@ const authMidleware = require('../middleware/auth.middleware')
 const homeRouter = require('./home.router');
 const productRouter = require('./products');
 const cartRouter = require('./cart');
-
+const adminMidleware = require('../middleware/auth.middleware')
 function route(app){
     
     app.use('/admin',adminRouter);
