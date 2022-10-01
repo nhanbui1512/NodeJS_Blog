@@ -1,0 +1,74 @@
+<div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+
+            <div class="container-fluid">
+
+                <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Quản lý tài khoản nhân viên </h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered verticle-middle">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Tên Nhân Viên</th>
+                                                <th scope="col">Ngày Sinh</th>
+                                                <th scope="col">Giới Tính</th>
+                                                <th scope="col">Quyền</th>
+                                                <th scope="col">Chỉnh Sửa</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            {{#each users}}
+                                                <tr>
+                                                    <td>{{this.email}}</td>
+                                                    <td>Nguyễn Văn A</td>
+                                                    <td>{{this.birthday}}</td>
+                                                    <td>Nam</td>
+                                                    <td>{{this.permission}}</td>
+                                                    <td><span><a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a></span>
+                                                    </td>
+
+                                                </tr>
+                                            {{/each}}
+                                            <tr>
+                                                <td>nhanvien1@gmail.com</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>15/2/2002</td>
+                                                <td>Nam</td>
+                                                <td>Staff</td>
+                                                <td><span><a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>nhanvien1@gmail.com</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>15/2/2002</td>
+                                                <td>Nam</td>
+                                                <td>Staff</td>
+                                                <td><span><a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <!-- #/ container -->
+        </div>

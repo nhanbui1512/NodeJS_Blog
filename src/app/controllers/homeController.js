@@ -28,9 +28,16 @@ class homeController {
         var listtee = [];
 
 
-        // console.log(req.socket.remoteAddress)
-        var result = dbHelper.getRecord('sanpham')
-            .then(function(rows){
+        fetch('http://localhost:3000/sanpham')
+            .then((resonse) =>{
+                if(resonse.ok){
+                    return resonse.json()
+                }
+
+                throw new Error('Error Something')
+            })
+            .then(rows => {
+
                 for (let i = rows.length - 1 ; i >= 0 ; i--) {
                     if(rows[i].IDLoaiHang == '1' && listbalo.length < 10 ){
                         listbalo.push({IDSanPham: rows[i].IDSanPham , TenSanPham: rows[i].TenSanPham , GiaSanPham: rows[i].GiaSanPham, urlAnh: rows[i].UrlAnh })
@@ -42,12 +49,16 @@ class homeController {
                         listtee.push({IDSanPham: rows[i].IDSanPham , TenSanPham: rows[i].TenSanPham , GiaSanPham: rows[i].GiaSanPham, urlAnh: rows[i].UrlAnh })
                     }
                 }
+            })
+
+            .then( () => {
                 res.render('home', {listbalo: listbalo , listjacket: listjacket, listtee: listtee});
-                // res.send(JSON.stringify(listbalo))
-
-
-
-        });
+            })
+            .catch(err => {
+                res.send('GET API is unsuccessful')
+            });
+            
+    
 
         // res.cookie('username', {name: 'nhanbui' , id : 3} , {
 
@@ -57,4 +68,3 @@ class homeController {
 
 }
 module.exports = new homeController;
-// module.exports = emitComment;

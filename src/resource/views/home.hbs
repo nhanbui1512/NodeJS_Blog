@@ -249,6 +249,18 @@
           </div>
         </div>
 
+        <div class="section-flash_item">
+          <div class="section-flash_item-img">
+            <img src="https://product.hstatic.net/1000281824/product/1650_1d0cb831186b484bad4f997998f2c77d_master.jpg" alt="">
+          </div>
+          <div class="section-flash_item-descrip">
+            <a href="">Áo Túi Logo Be - ATLG Be</a>
+            <p>240,000₫</p>
+          <span class="sale-value">35%</span>
+
+          </div>
+        </div>
+
 
       </div>
 
@@ -379,7 +391,11 @@
 
       nextbtn.addEventListener('click', function(){
           if(count < widthSlider){
-              count += 219;
+            count += 219;
+          }
+
+          if( count > widthSlider){
+            count = 0;
           }
           slider.style.transform = `translateX(-${count}px)`;
       })
@@ -388,6 +404,10 @@
 
           if(count > 0){
               count -= 219;
+          }
+
+          if(count == 0){
+            count = 219 * (items.length - 5)
           }
           slider.style.transform = `translateX(-${count}px)`;
       })

@@ -8,3 +8,6 @@ router.post('/addProduct',collectionController.addProduct);
 router.get('/:slug',collectionController.index);
 
 module.exports = router;
+
+
+

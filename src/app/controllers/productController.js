@@ -1,3 +1,4 @@
+const { response } = require('express');
 const dbHelper = require('./dbHelper');
 
 
@@ -6,16 +7,22 @@ class ProductController {
 
     getProduct(req, res){
         var id = req.params.id;
-        dbHelper.getRecord('sanpham')
-            .then( function(rows){
-                for (let i = 0; i < rows.length; i++) {
-                    if(rows[i].IDSanPham == id){
-                        res.render('product', {sanpham : rows[i]});
-                        return;
-                    }
-                    
+        fetch(`http://localhost:3000/sanpham/${id}`)
+            .then(response => {
+                if(response.ok){
+                    return response.json()
                 }
+                throw new Error
             })
+            .then(result => {
+                res.render('product', {sanpham : result[0]});
+            })
+            .catch((err) =>{
+                res.send(`GET API is unsuccessful`)
+            })
+
+
+
     }
     
 

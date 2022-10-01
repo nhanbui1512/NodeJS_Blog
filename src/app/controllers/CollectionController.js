@@ -11,31 +11,33 @@ con.connect();
 
 class CollectionController { 
 
-    //GET /news
+    // /collection/:slug
     index(req, res){
 
         var data = [];
-        var query = `SELECT sanpham.IDSanPham, sanpham.TenSanPham, sanpham.GiaSanPham, sanpham.UrlAnh, loaihang.TenLoaiHang FROM sanpham, loaihang WHERE loaihang.SlugLoaiHang = '${req.params.slug}' AND loaihang.IDLoaiHang = sanpham.IDLoaiHang; `
-        
-        con.query(query , function(err, result, fields){
+        var slug = req.params.slug
 
-            try {
-                
-                if(err) {
-                    console.log('Errro' + err);
+        fetch(`http://localhost:3000/sanpham/${slug}`)
+            .then( (response) => {
+                if(response.ok){
+                    return response.json()
                 }
-                else{
-                    data = result;
-                    res.render('collection', {data: data , nameCollection: data[0].TenLoaiHang})
-                }
-              }
+                return new Error
+            })  
 
-            catch(err) {
-                res.send('Page Not Found')
-            }
+            .then( rows => {
+                data = rows
+            })
 
+            .then( () => {
+                res.render('collection', {data: data , nameCollection: data[0].TenLoaiHang})
 
-        });
+            })
+
+            .catch((err) => {
+                res.send('GET API is unsuccessful')
+            } )
+
 
 
 
