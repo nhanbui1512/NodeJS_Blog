@@ -17,7 +17,7 @@ class CollectionController {
         var data = [];
         var slug = req.params.slug
 
-        fetch(`http://localhost:3000/sanpham/${slug}`)
+        fetch(`http://localhost:3001/sanpham/${slug}`)
             .then( (response) => {
                 if(response.ok){
                     return response.json()

@@ -29,11 +29,15 @@ class AdminController {
 
     // GET /admin/staff
     staffAccount(req, res){
-        var query = 'user'
 
-        dbHelper.getRecord(query)
+        fetch('http://localhost:3001/account')
+            .then(res => {
+                if(res.ok ){
+                    return res.json()
+                }
+                throw new Error
+            })
             .then((result) => {
-
                 res.render('admin/staffAccount',{
                     layout: 'adminLayout.hbs',
                     users: result
@@ -48,6 +52,18 @@ class AdminController {
             layout: 'adminLayout.hbs'
         })
     }
+
+
+    // GET /admin/edit/ID
+
+    editInfo(req, res){
+        var ID = req.params.ID
+        console.log(ID)
+        res.render('admin/editinfo', {
+            layout: 'adminLayout.hbs'
+        })
+    }
+    
 
 }
 module.exports = new AdminController;

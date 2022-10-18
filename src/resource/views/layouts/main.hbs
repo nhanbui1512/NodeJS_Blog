@@ -22,7 +22,44 @@
         {{{body}}}
     </div>
     {{> footer}}
+
+    <div class="search-wrap">
+      <div class="search-container" onclick="event.stopPropagation()">
+        <div class="search-content">
+          <div class="search-content_input">
+            <span class="search-content_icon"><i class="fa-regular fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+          </div>
+
+          <div class="search-content_recommend">
+            <p class="recommend-header">Gợi ý cho bạn:</p>
+            <ul class="recommend-list">
+              <li class="recommend-item"><a href="">ÁO | CLOTHES</a></li>
+              <li class="recommend-item"><a href="">Áo khoác | Jacket</a></li>
+              <li class="recommend-item"><a href="">Áo thun | T-shirt</a></li>
+              <li class="recommend-item"><a href="">Áo tay dài | Sweater</a></li>
+              <li class="recommend-item"><a href="">Áo trùm đầu | Hoodie</a></li>
+              <li class="recommend-item"><a href="">Áo sơ mi | Shirt</a></li>
+              <li class="recommend-item"><a href="">Quần dài| Pants</a></li>
+              <li class="recommend-item"><a href="">Quần ngắn| Short</a></li>
+              <li class="recommend-item"><a href="">Phụ kiện | Accessories</a></li>
+              <li class="recommend-item"><a href="">Balo | Backpacks</a></li>
+              <li class="recommend-item"><a href="">Túi | Bag</a></li>
+              <li class="recommend-item"><a href="">Túi | Wallet</a></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <button class="search-container_closebtn">
+          <i class="fa-regular fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
   </body>
+
+
 
   <script>
     var app = document.querySelector('body')
@@ -38,6 +75,7 @@
       }
     }
   </script>
+  <script src="/js/main.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

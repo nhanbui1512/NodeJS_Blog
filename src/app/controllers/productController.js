@@ -7,7 +7,7 @@ class ProductController {
 
     getProduct(req, res){
         var id = req.params.id;
-        fetch(`http://localhost:3000/sanpham/${id}`)
+        fetch(`http://localhost:3001/sanpham/${id}`)
             .then(response => {
                 if(response.ok){
                     return response.json()

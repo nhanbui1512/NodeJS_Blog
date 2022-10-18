@@ -722,6 +722,8 @@
 
 	</body>
 
+
+
     <script>
         var items = document.querySelectorAll('.product-gallery')
         var count = 0;
@@ -775,6 +777,9 @@
             var quantityCartNumber = parseInt(quantityCart.textContent);
             quantityCartNumber ++ ;
             quantityCart.textContent = quantityCartNumber
+
+
+
         })
 
         var productThumb = document.querySelectorAll('.product-thumb');
@@ -795,5 +800,70 @@
             }
         }
 
+
+
+
+    // Xóa 1 sản phẩm trong cart ra khỏi DOM
+        var deleteBtn = document.querySelectorAll('.mini-cart_delete-btn')
+    
+        for(var i = 0 ; i < deleteBtn.length ; i++ ){
+            deleteBtn[i].onclick = function(e){
+            var item = e.currentTarget
+            var container = item.parentElement;
+            container.remove()
+            }
+        }
+
+    //
+
+    
+        function createProductCartUI (name , number , price , type , urlImg ){
+            var productOfCart = `<div class="mini-cart_item relative">
+                    <div class="mini-cart_left">
+                      <img src="${urlImg}" alt="">
+                    </div>
+                    <div class="mini-cart_right">
+                      <p class="mini-cart_title"> 
+                        <a href="">${name}</a> 
+                        <span>BALO</span>
+                      </p>
+
+                      <div class="mini-cart__quantity">
+                        <div class="quantity-selector">
+                          <button class="mini-cart_btn"><i class="fa-solid fa-minus"></i></button>
+                          <input type="text" value="1">
+                          <button class="mini-cart_btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                        <div class="mini-cart__price">
+                          <span>${price}₫</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="mini-cart_delete-btn"><i class="fa-thin fa-xmark"></i></button>
+                  </div>
+                  `
+
+            return productOfCart
+
+        }
+      
+        var cartContainer = document.querySelector('.cart-view-scroll')
+
+
+        addBtn.addEventListener('click' , function () {
+            cartContainer.innerHTML += createProductCartUI('Balo Hạt Nhân Degrey - BHND' , 1 , '420,000' , 'Balo' , '/image/6494b116-a95f-42e1-bd99-33ae0fef78a3_c36ead4edfde4943b98b4ad16eb74463_master.webp')
+        })
+
+       
+
+
     </script>
+
+
+    <script>
+    
+
+</script>
 </html>

@@ -28,7 +28,7 @@ class homeController {
         var listtee = [];
 
 
-        fetch('http://localhost:3000/sanpham')
+        fetch('http://localhost:3001/sanpham')
             .then((resonse) =>{
                 if(resonse.ok){
                     return resonse.json()

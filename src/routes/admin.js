@@ -7,6 +7,7 @@ router.get('/type',adminController.typeProduct);
 router.get('/product', adminController.productManager)
 router.get('/staff',adminController.staffAccount)
 router.get('/orders', adminController.getOrders)
+router.get('/edit/:ID', adminController.editInfo)
 router.get('/',adminController.index);
 
 
